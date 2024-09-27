@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blake's Home Page</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="./CSS/homepage.css" />
+  </head>
+  <style>
+    @font-face {
+      font-family: "BleedingCowboys";
+      src: url("fonts/BleedingCowboys.eot");
+      src: local("BleedingCowboys"),
+        url("fonts/BleedingCowboys.ttf") format("truetype");
+    }
+    body {
+      background: url("./photos/beachhouse.jpg") no-repeat center top;
+      background-size: cover;
+      background-color: #686c53; /* Olive green background */
+      min-height: 100vh; /* Full height */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  </style>
+  <body class="text-white">
+    <!-- Header with Title and Dropdown Menus -->
+    <header class="bg-opacity-80 bg-[#304E47] p-4 shadow-lg">
+      <div
+        class="container mx-auto flex flex-col md:flex-row md:justify-between items-center"
+      >
+        <!-- Title and Logo -->
+        <div class="flex items-center space-x-4 mb-4 md:mb-0">
+          <img src="./photos/picturelogo.png" alt="Logo" class="h-12 w-12" />
+          <h1 class="text-3xl font-bold text-[#2DBA94]">
+            Blake Adams's Home Page
+          </h1>
+        </div>
+
+        <!-- Dropdown Menus -->
+        <nav
+          class="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0"
+        >
+          <!-- Projects Dropdown -->
+          <div
+            class="relative"
+            onmouseover="showDropdown('projectsDropdown')"
+            onmouseout="hideDropdownWithDelay('projectsDropdown')"
+          >
+            <a href="#" class="button">Projects</a>
+            <div
+              id="projectsDropdown"
+              class="dropdown-menu mt-2 w-48 text-white rounded-lg shadow-lg"
+            >
+              <a
+                href="./project/project1.html"
+                class="block px-4 py-2 hover:bg-[#0B5690] hover:text-white"
+                onclick="resetDropdown()"
+                >Project 1</a
+              >
+              <a
+                href="./project/project2/NativeCooking_AboutUs.html"
+                class="block px-4 py-2 hover:bg-[#0B5690] hover:text-white"
+                onclick="resetDropdown()"
+                >About Us - Project 2</a
+              >
+              <a
+                href="./project/project2/NativeCooking_Tributes.html"
+                class="block px-4 py-2 hover:bg-[#0B5690] hover:text-white"
+                onclick="resetDropdown()"
+                >Tributes - Project 2
+              </a>
+              <a
+                href="./project/project3/NativeCooking_AboutUs.html"
+                class="block px-4 py-2 hover:bg-[#0B5690] hover:text-white"
+                onclick="resetDropdown()"
+                >About Us - Project 3</a
+              >
+              <a
+                href="./project/project3/NativeCooking_Tributes.html"
+                class="block px-4 py-2 hover:bg-[#0B5690] hover:text-white"
+                onclick="resetDropdown()"
+                >Tributes - Project 3</a
+              >
+            </div>
+          </div>
+
+          <!-- Practice Assignments Dropdown -->
+          <div
+            class="relative"
+            onmouseover="showDropdown('practiceDropdown')"
+            onmouseout="hideDropdownWithDelay('practiceDropdown')"
+          >
+            <a href="#" class="button">Practice Assignments</a>
+            <div
+              id="practiceDropdown"
+              class="dropdown-menu mt-2 w-48 text-white rounded-lg shadow-lg"
+            >
+              <a
+                href="./practice/practice1/index.html"
+                class="block px-4 py-2 hover:bg-[#0B5690] hover:text-white"
+                onclick="resetDropdown()"
+                >Practice 1</a
+              >
+              <a
+                href="./practice/practice1b/practice1b.html"
+                class="block px-4 py-2 hover:bg-[#0B5690] hover:text-white"
+                onclick="resetDropdown()"
+                >Practice 1b</a
+              >
+              <a
+                href="./practice/practice2/cactus.html"
+                class="block px-4 py-2 hover:bg-[#0B5690] hover:text-white"
+                onclick="resetDropdown()"
+                >Practice 2</a
+              >
+              <a
+                href="./practice/practice3/practice3.html"
+                class="block px-4 py-2 hover:bg-[#0B5690] hover:text-white"
+                onclick="resetDropdown()"
+                >Practice 3</a
+              >
+              <a
+                href="./practice/practice4a/practice4a.html"
+                class="block px-4 py-2 hover:bg-[#0B5690] hover:text-white"
+                onclick="resetDropdown()"
+                >Practice 4a</a
+              >
+              <a
+                href="./practice/practice4b/CSS3Fonts/CSS3Fonts.html"
+                class="block px-4 py-2 hover:bg-[#0B5690] hover:text-white"
+                onclick="resetDropdown()"
+                >Practice 4b</a
+              >
+              <a
+                href="./practice/practice5/practice5.html"
+                class="block px-4 py-2 hover:bg-[#0B5690] hover:text-white"
+                onclick="resetDropdown()"
+                >Practice 5</a
+              >
+              <a
+                href="./practice/practice5b/bistro.html"
+                class="block px-4 py-2 hover:bg-[#0B5690] hover:text-white"
+                onclick="resetDropdown()"
+                >Practice 5b</a
+              >
+            </div>
+          </div>
+
+          <!-- Book Assignments Dropdown -->
+          <div
+            class="relative"
+            onmouseover="showDropdown('bookDropdown')"
+            onmouseout="hideDropdownWithDelay('bookDropdown')"
+          >
+            <a href="#" class="button">Book Assignments</a>
+            <div
+              id="bookDropdown"
+              class="dropdown-menu mt-2 w-48 text-white rounded-lg shadow-lg"
+            >
+              <!-- Future links for book assignments can be added here -->
+            </div>
+          </div>
+          <div>
+            <!-- New Page Link -->
+            <a href="newpage.html" class="button">My Info</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Content Wrapper centered on the left side -->
+    <div class="content-wrapper">
+      <main>
+        <h2 class="text-xl font-bold">Welcome to the Home Page</h2>
+        <p>
+          This is the main content of the homepage. Resize the window to see the
+          effect.
+        </p>
+      </main>
+    </div>
+
+    <script>
+      let dropdownTimeout;
+      let currentDropdown;
+
+      // Show the dropdown
+      function showDropdown(id) {
+        if (currentDropdown && currentDropdown !== id) {
+          document.getElementById(currentDropdown).style.display = "none";
+        }
+        clearTimeout(dropdownTimeout); // Clear any existing timeout
+        document.getElementById(id).style.display = "block";
+        currentDropdown = id; // Set the current dropdown to the new one
+      }
+
+      // Hide the dropdown with a slight delay
+      function hideDropdownWithDelay(id) {
+        dropdownTimeout = setTimeout(function () {
+          document.getElementById(id).style.display = "none";
+          if (currentDropdown === id) {
+            currentDropdown = null; // Clear current dropdown if it is the same one
+          }
+        }, 150); // Adjust delay time to 150ms for a quicker response
+      }
+
+      // Reset the dropdown when clicking a link
+      function resetDropdown() {
+        if (currentDropdown) {
+          document.getElementById(currentDropdown).style.display = "none";
+          currentDropdown = null;
+          clearTimeout(dropdownTimeout); // Clear the timeout to avoid delay issues
+        }
+      }
+    </script>
+  </body>
+</html>
